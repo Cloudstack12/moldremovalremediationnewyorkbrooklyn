@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Global Styles */
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px 0%;
+  background: #ffffff;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+a.new:hover{
+    color:red;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  height: 89vh;
+}
+.main-wrapper{
+  flex: 2;
+  overflow-y: scroll;
+}
+.side-bar{
+  background: #faf9f9;
+  flex: .5;
+  padding: 40px;
+  text-align: center;
+  /* background-color: white; */
+}
+
+.side-bar ul{
+  padding: 0 40px;
+  list-style: none;
+  text-align: center;
+}
+
+.side-bar{
+  background: rgb(230, 230, 231);
+}
+
+
+@media only screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .side-bar{
+    background: #114;
+    color: white !important;
+  }
+  .side-bar a{
+    color: white !important;
+  }
+}
+
+
+
+/* Navigation Menu Styles */
+
+nav.nav-menu {
+  width: 100%;
+  background-color:#255d95;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+nav.nav-menu ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: clamp(.8rem, 1.2vw, 2rem); 
+}
+
+.nav-menu .nav-item {
+  padding: 15px;
+  transition: background-color 500ms ease-in-out;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
+.nav-menu .nav-item:hover {
+  cursor: pointer;
+  background-color: #f5f5f54d;
+}
+
+.nav-menu .nav-item a{
+  text-decoration: none;
+  color:#f7f7f7;
+  font-weight: bold;
+}
+
+
+/* Main Content Wrapper Styles */
+.main-wrapper {
+  background: white;
+  padding: 40px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+section.head,
+section.youtube-embed {
+  text-align: center;
+}
+
+.button-link {
+  display: block;
+  margin: 20px 0 0 0;
+  padding: 10px 25px;
+  width: fit-content;
+  background:#f10000;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s transform ease-in-out;
+  text-align: center;
+}
+
+.button-link:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: lightsalmon;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+ul{
+  padding-left: 30px;
+  }
+  
+  .side ul{
+    text-align: justify;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    font-family: "Cormorant SC", sans-serif;
+    font-size:30px;
+
+  }
+
+  ol{
+    padding-left: 40px;
+    }
+    
+    .side ol{
+      text-align: justify;
+      margin-bottom: 10px;
+      line-height: 1.5rem;
+      font-family: "Cormorant SC", sans-serif;
+      font-size:30px;
+  
+    }
+
+p {
+  text-align: justify;
+  margin-bottom: 10px;
+  line-height: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  float: left;
+  border: 0px solid white;
+  border-radius: 0px;
+  margin: 15px;
+}
+
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.two-col div {
+  width: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    padding: 0;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .two-col div {
+    width: 100%;
+  }
+
+  .main-wrapper {
+    padding: 5%;
+  }
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn-ggdep.nitrocdn.com/CgFNeiRmSktPAGefIAzXZDiMuFQteDrk/assets/images/optimized/rev-981b624/wp-content/uploads/2022/06/Untitled-design-9.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-image1 {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn-ggdep.nitrocdn.com/CgFNeiRmSktPAGefIAzXZDiMuFQteDrk/assets/images/optimized/rev-981b624/wp-content/uploads/2022/06/Untitled-design-11.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-image2 {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn-ggdep.nitrocdn.com/CgFNeiRmSktPAGefIAzXZDiMuFQteDrk/assets/images/optimized/rev-981b624/wp-content/uploads/2022/06/Untitled-design-12.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-image3 {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn-ggdep.nitrocdn.com/CgFNeiRmSktPAGefIAzXZDiMuFQteDrk/assets/images/optimized/rev-981b624/wp-content/uploads/2022/06/Untitled-design-12.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
